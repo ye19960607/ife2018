@@ -1,0 +1,385 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*
+*{
+	height: 100%;
+}
+
+#left{
+	width: 30%;
+	height: 100%;
+	background-color: red;
+	float: left;
+}
+
+#right{
+	width: 70%;
+	height: 100%;
+	background: blue;
+	float: left;
+}
+*/
+/*设置子元素的高度百分比需要先设置父元素（*的height：100%属性）的百分比可以实现高度的自适应*/
+
+/*	float实现两栏布局，左侧占30%宽度，右侧占70%宽度*/
+
+
+
+ /**{
+	height: 100%;
+	overflow: hidden; 
+}
+
+#left{
+	width: 100px;
+	height: 100%;
+	background-color: red;
+	float: left;
+}
+
+#right{
+	height: 100%;
+	background-color: blue;
+	margin-left: 100px;
+}*/
+/*使用浮动定好左侧固定位置 然后通过margin属性根据左侧位置固定右侧位置*/
+
+/*float实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化*/
+
+
+
+/* *{
+	height: 100%;
+	overflow: hidden; 
+}
+
+#left{
+	height: 100%;
+	background-color: red;
+	margin-right: 100px;
+}
+
+#right{
+	width: 100px;
+	height: 100%;
+	background-color: blue;
+	float:right;
+}*/
+
+
+/*这里有个坑 由于浏览器的顺序渲染，先实现左侧容器会挡住右侧容器内容。应将right容器放在left前先生成*/
+
+/*float实现一个两栏布局，右侧固定宽度，左侧根据浏览器宽度进行自适应变化*/
+
+
+/**{
+	height: 100%;
+	overflow: hidden;
+}
+
+
+#middle{
+	height: 100%;
+	margin: 0 110px;
+	background-color: black;
+}
+
+#left{
+	width: 100px;
+	height: 100%;
+	background-color: red;
+	float:left;
+}
+
+#right{
+	width: 100px;
+	height: 100%;
+	background-color: blue;
+	float:right;
+}
+*/
+/*设置好两侧定宽分别向左右浮动，再通过margin属性来固定好中间自适应栏的位置*/
+
+/*float实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化*/
+
+/**{
+	height: 100%;
+	overflow: hidden;
+}
+
+#left{
+	width: 100px;
+	height: 100%;
+	background-color: red;
+	float:left;
+}
+
+#right{
+	height: 100%;
+	background-color: blue;
+	margin-left: 200px;
+}
+
+#middle{
+	height: 100%;
+	width: 100px;
+	background-color: black;
+	float: left;
+}*/
+/*设置好左中两侧定宽分别向左浮动，再通过margin属性来固定好右边自适应栏的位置*/
+/*需要按顺序加载left Middle right*/
+
+/*float实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化*/
+
+
+
+
+/**{
+	height: 100%;
+}
+
+#left{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 30%;
+	background:red;
+}
+
+#right{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 70%;
+	background: blue;
+}
+*/
+/*position实现一个两栏布局，左侧占30%宽度，右侧占70%宽度*/
+
+/**{
+	height: 100%;
+}
+
+#left{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	background:red;
+	height: 100%;
+}
+
+#right{
+	margin-left:100px;
+	background: blue;
+	height: 100%;
+}
+*/
+/*注释掉middle盒子能正常显示 很奇怪middle只是个空盒子为什么会对其他容器造成影响*/
+
+/*position实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化*/
+
+/**{
+	height: 100%;
+}
+
+#left{
+	background:red;
+	height: 100%;
+	margin-right: 100px;
+}
+
+#right{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	background: blue;
+	height: 100%;
+}*/
+
+/*position实现一个两栏布局，右侧固定宽度，左侧根据浏览器宽度进行自适应变化*/
+
+/**{
+	height: 100%;
+}
+
+#left{
+	background:red;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+}
+
+#right{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	background: blue;
+	height: 100%;
+}
+
+#middle{
+	margin: 0 100px;
+	background-color: black;
+}*/
+
+/*position实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化*/
+
+/**{
+	height: 100%;
+}
+
+#left{
+	background:red;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+}
+
+#right{
+	background: blue;
+	height: 100%;
+	margin-left: 200px;
+}
+
+#middle{
+	position: absolute;
+	top: 0;
+	left: 100px;
+	width: 100px;
+	background-color: black;
+}*/
+
+/*position实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化*/
+
+/**{
+	height: 100%;
+}
+body{
+	display: flex;
+	height: 100%;
+}
+
+#left{
+	width: 30%;
+	height: 100%;
+	background: red;
+}
+
+#right{
+	width: 70%;
+	height: 100%;
+	background: blue;
+}*/
+
+/*flexbox实现一个两栏布局，左侧占30%宽度，右侧占70%宽度*/
+
+/**{
+	height: 100%;
+}
+body{
+	display: flex;
+	height: 100%;
+}
+
+#left{
+	width: 100px;
+	height: 100%;
+	background: red;
+}
+
+#right{
+	flex: 1;
+	height: 100%;
+	background: blue;
+}*/
+
+/*flexbox实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化*/
+
+/**{
+	height: 100%;
+}
+body{
+	display: flex;
+	height: 100%;
+}
+
+#left{
+	flex: 1;
+	height: 100%;
+	background: red;
+}
+
+#right{
+	width: 100px;
+	height: 100%;
+	background: blue;
+}*/
+
+/*flexbox实现一个两栏布局，右侧固定宽度，左侧根据浏览器宽度进行自适应变化*/
+
+
+/**{
+	height: 100%;
+}
+body{
+	display: flex;
+	height: 100%;
+}
+
+#left{
+	width: 100px;
+	height: 100%;
+	background: red;
+}
+
+#right{
+	width: 100px;
+	height: 100%;
+	background: blue;
+}
+
+#middle{
+	flex: 1;
+	height: 100%;
+	background: black;
+}*/
+
+/*flexbox实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化
+*/
+
+*{
+	height: 100%;
+}
+body{
+	display: flex;
+	height: 100%;
+}
+
+#left{
+	width: 100px;
+	height: 100%;
+	background: red;
+}
+
+#right{
+	flex: 1;
+	height: 100%;
+	background: blue;
+}
+
+#middle{
+	width: 100px;
+	height: 100%;
+	background: black;
+}
+
+/*flexbox实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化*/
