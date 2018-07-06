@@ -1,0 +1,25 @@
+.info{
+	display: inline;
+}
+
+
+#hea{
+	background-color: gray;
+}
+
+.head{
+	background-color: red;
+}
+
+.head-l{
+	float: left;
+	width: 100px;
+	background-color: red; 
+	text-align: center;
+	height: 100px;
+}
+
+.head-r{
+	background-color: white;
+	height: 100px;
+}
